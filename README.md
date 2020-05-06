@@ -4,14 +4,19 @@
 
 ## Installation
 
+#### Binder:
+
+In the minicourse, if you haven't prepared beforehand, please use this link to run online via Binder: [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/henryiii/python-compiled-minicourse/master?urlpath=lab)
+
 #### Adroit
 
+See class.
 
 #### Local install:
 
 If you are reading this at least 10 minutes before the course starts or you have anaconda
 or miniconda installed, you will probably be best off installing miniconda.
-This way you will keep local edits and will have an environment to play with.
+This way you will keep local edits and will have an environment to play with. Warning: Some part
 
 Get the repository:
 
