@@ -145,4 +145,6 @@ cython_debug/
 *.cpp
 *.cxx
 *.hpp
+*.pyx
+*.pxd
 *.i
