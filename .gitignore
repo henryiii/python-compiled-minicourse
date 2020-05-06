@@ -140,7 +140,7 @@ cython_debug/
 # HENRYIII additions
 
 *.hpp
-*.py
+/*/*.py
 *.c
 *.cpp
 *.cxx
