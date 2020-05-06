@@ -155,3 +155,4 @@ cython_debug/
 simpleminuit
 *.h
 *.toml
+*.dSYM
