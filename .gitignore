@@ -148,3 +148,10 @@ cython_debug/
 *.pyx
 *.pxd
 *.i
+*.ninja*
+*CMake*
+*CPack*
+*.cmake
+simpleminuit
+*.h
+*.toml

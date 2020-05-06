@@ -16,3 +16,4 @@ dependencies:
   - cffi >=1.14
   - compilers
   - cmake
+  - ninja
