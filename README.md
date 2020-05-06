@@ -21,8 +21,8 @@ This way you will keep local edits and will have an environment to play with. Wa
 Get the repository:
 
 ```bash
-git clone https://github.com/henryiii/python-performance-minicourse.git
-cd python-performance-minicourse
+git clone https://github.com/henryiii/python-compiled-minicourse.git
+cd python-compiled-minicourse
 ```
 
 Download and install
@@ -39,7 +39,7 @@ conda env create
 from this directory. This will create an environment `performance-minicourse`. To use:
 
 ```bash
-conda activate compiled--minicourse
+conda activate compiled-minicourse
 ./check.py # Check to see if you've installed this correctly
 jupyter lab
 ```
