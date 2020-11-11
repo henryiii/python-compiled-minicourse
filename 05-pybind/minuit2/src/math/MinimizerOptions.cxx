@@ -243,4 +243,3 @@ void MinimizerOptions::PrintDefault(const char * name, std::ostream & os) {
 } // end namespace Math
 
 } // end namespace ROOT
-

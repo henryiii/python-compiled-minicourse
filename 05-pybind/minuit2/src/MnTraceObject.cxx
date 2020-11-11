@@ -46,4 +46,3 @@ namespace ROOT {
    }  // namespace Minuit2
 
 }  // namespace ROOT
-

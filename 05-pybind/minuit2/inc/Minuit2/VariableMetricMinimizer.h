@@ -33,7 +33,7 @@ namespace ROOT {
 
 class VariableMetricMinimizer : public ModularFunctionMinimizer {
 
-   
+
 
 public:
 

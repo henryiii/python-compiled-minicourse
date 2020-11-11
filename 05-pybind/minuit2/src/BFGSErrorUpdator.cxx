@@ -68,8 +68,8 @@ LASquareMatrix OuterProduct(const LAVector& v1, const LAVector& v2) {
    }
    return a;
 }
-// compute product of symmetric matrix with square matrix 
-      
+// compute product of symmetric matrix with square matrix
+
 LASquareMatrix MatrixProduct(const LASymMatrix& m1, const LASquareMatrix& m2) {
    unsigned int n = m1.Nrow();
    assert(n == m2.Nrow() );
@@ -98,7 +98,7 @@ MinimumError BFGSErrorUpdator::Update(const MinimumState& s0,
    const MnAlgebraicSymMatrix& v0 = s0.Error().InvHessian();
    MnAlgebraicVector dx = p1.Vec() - s0.Vec();
    MnAlgebraicVector dg = g1.Vec() - s0.Gradient().Vec();
- 
+
    double delgam = inner_product(dx, dg);   // this is s^T y  using wikipedia conventions
    double gvg = similarity(dg, v0);   // this is y^T B^-1 y
 
@@ -135,17 +135,17 @@ MinimumError BFGSErrorUpdator::Update(const MinimumState& s0,
    LASquareMatrix a = OuterProduct(dg,dx);
    LASquareMatrix b = MatrixProduct(v0, a);
 
-   unsigned int n = v0.Nrow(); 
+   unsigned int n = v0.Nrow();
    MnAlgebraicSymMatrix v2( n );
-   for (unsigned int i = 0; i < n; ++i)  { 
+   for (unsigned int i = 0; i < n; ++i)  {
       for (unsigned int j = i; j < n; ++j)  {
          v2(i,j) = (b(i,j) + b(j,i))/(delgam);
       }
    }
 
    MnAlgebraicSymMatrix vUpd = ( delgam + gvg) * Outer_product(dx) / (delgam * delgam);
-   vUpd -= v2; 
-   
+   vUpd -= v2;
+
 
    double sum_upd = sum_of_elements(vUpd);
    vUpd += v0;

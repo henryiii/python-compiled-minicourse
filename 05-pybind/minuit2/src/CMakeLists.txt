@@ -226,4 +226,3 @@ install(TARGETS Minuit2
         )
 
 install(FILES ${MINUIT2_HEADERS} DESTINATION include/Minuit2/Minuit2)
-

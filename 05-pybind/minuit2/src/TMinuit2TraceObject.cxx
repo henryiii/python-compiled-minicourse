@@ -119,4 +119,3 @@ void TMinuit2TraceObject::operator() (int iter, const ROOT::Minuit2::MinimumStat
 
    }
 }
-

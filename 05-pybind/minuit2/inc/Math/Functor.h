@@ -32,7 +32,7 @@ namespace Math {
    Internal classes for implementing Functor and Functor1D classes
    @ingroup GenFunc
  */
-   
+
 /**
    FunctorImpl is a base class for the functor
    handler implementation class.

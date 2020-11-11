@@ -245,7 +245,7 @@ L30:
 
    //off-diagonal Elements
    // initial starting values
-   if (n > 0) { 
+   if (n > 0) {
       MPIProcess mpiprocOffDiagonal(n*(n-1)/2,0);
       unsigned int startParIndexOffDiagonal = mpiprocOffDiagonal.StartElementIndex();
       unsigned int endParIndexOffDiagonal = mpiprocOffDiagonal.EndElementIndex();

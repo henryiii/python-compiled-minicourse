@@ -54,7 +54,7 @@ or restart your terminal.
 
 
 > If you want to add a package, modify `environment.yml` then run:
-> 
+>
 > ```bash
 > conda env update
 > ```

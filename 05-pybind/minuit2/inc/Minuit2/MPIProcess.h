@@ -142,5 +142,3 @@ namespace Minuit2 {
 } // namespace ROOT
 
 #endif
-
-

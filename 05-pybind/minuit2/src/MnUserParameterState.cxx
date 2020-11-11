@@ -101,7 +101,7 @@ MnUserParameterState::MnUserParameterState(const MinimumState& st, double up, co
    // construct from internal parameters (after minimization)
    //
    //std::cout << "build a MnUSerParameterState after minimization.." << std::endl;
-   
+
    for(std::vector<MinuitParameter>::const_iterator ipar = trafo.Parameters().begin(); ipar != trafo.Parameters().end(); ++ipar) {
       if((*ipar).IsConst()) {
          Add((*ipar).GetName(), (*ipar).Value());

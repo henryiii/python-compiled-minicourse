@@ -127,4 +127,3 @@ function(COPY_STANDALONE)
         set(${COPY_STANDALONE_OUTPUT} ${FILENAMES} PARENT_SCOPE)
     endif()
 endfunction()
-

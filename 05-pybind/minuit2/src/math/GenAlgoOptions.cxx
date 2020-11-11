@@ -78,4 +78,3 @@ namespace GenAlgoOptUtil {
    } // end namespace Math
 
 } // end namespace ROOT
-

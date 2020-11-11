@@ -31,9 +31,9 @@ public:
    BasicMinimumState(unsigned int n, double fval, double edm, int nfcn) :
       fParameters(MinimumParameters(n,fval)), fError(MinimumError(n)),
     fGradient(FunctionGradient(n)), fEDM(edm), fNFcn(nfcn) {}
-   
+
   BasicMinimumState(const MinimumParameters& states, const MinimumError& err,
-                    const FunctionGradient& grad, double edm, int nfcn) :     
+                    const FunctionGradient& grad, double edm, int nfcn) :
      fParameters(states), fError(err), fGradient(grad), fEDM(edm), fNFcn(nfcn) {}
 
    BasicMinimumState(const MinimumParameters& states, double edm, int nfcn) : fParameters(states), fError(MinimumError(states.Vec().size())),

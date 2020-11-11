@@ -38,9 +38,9 @@ FunctionGradient AnalyticalGradientCalculator::operator()(const MinimumParameter
          v(i) = grad[ext];
       }
    }
-#ifdef DEBUG  
+#ifdef DEBUG
    std::cout << "User given gradient in Minuit2" << v << std::endl;
-#endif   
+#endif
 
    return FunctionGradient(v);
 }

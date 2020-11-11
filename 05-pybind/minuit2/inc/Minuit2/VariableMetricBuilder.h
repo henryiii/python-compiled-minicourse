@@ -27,15 +27,15 @@ namespace ROOT {
    Build (find) function minimum using the Variable Metric method (MIGRAD)
    Two possible error updators can be choosen
     - Davidon : this is the standard formula used in Migrad
-    - BFGS this is the new formula based on BFGS algorithm 
-      (see Broyden–Fletcher–Goldfarb–Shanno algorithm  
+    - BFGS this is the new formula based on BFGS algorithm
+      (see Broyden–Fletcher–Goldfarb–Shanno algorithm
       https://en.wikipedia.org/wiki/Broyden–Fletcher–Goldfarb–Shanno_algorithm )
  */
 class VariableMetricBuilder : public MinimumBuilder {
 
 public:
 
-   enum ErrorUpdatorType { kDavidon, kBFGS }; 
+   enum ErrorUpdatorType { kDavidon, kBFGS };
 
    VariableMetricBuilder(ErrorUpdatorType type = kDavidon) :
       fEstimator(VariableMetricEDMEstimator())
