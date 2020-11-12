@@ -36,7 +36,7 @@ Run:
 conda env create
 ```
 
-from this directory. This will create an environment `performance-minicourse`. To use:
+from this directory. This will create an environment `compiled-minicourse`. To use:
 
 ```bash
 conda activate compiled-minicourse
