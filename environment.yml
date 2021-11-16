@@ -18,3 +18,4 @@ dependencies:
   - cmake
   - ninja
   - nb_conda_kernels
+  - mypy >=0.900
