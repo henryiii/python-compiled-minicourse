@@ -1,6 +1,5 @@
 \page Minuit2Page Minuit2
 
-
 The **Minuit2** library is a new object-oriented implementation, written in C++,
 of the popular MINUIT minimization package. These new version provides basically
 all the functionality present in the old Fortran version, with almost equivalent

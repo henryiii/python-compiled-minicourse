@@ -1,5 +1,7 @@
 # Mixing Compiled Code and Python
+
 ## Princeton mini-course
+
 ### By Henry Schreiner
 
 ## Installation
@@ -52,15 +54,12 @@ conda deactivate
 
 or restart your terminal.
 
-
 > If you want to add a package, modify `environment.yml` then run:
 >
 > ```bash
 > conda env update
 > ```
 
-
 ## Lessons
-
 
 Class participants: please complete the survey that will be posted.

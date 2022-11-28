@@ -28,12 +28,12 @@ Minuit2 standalone also has support for CPack to make installers for different p
 make package_source
 ```
 
-
 This will create a source file in several formats that you can distribute. Reminder: You **must** have used `-Dminuit2_standalone=ON` when you configured CMake, or many of the files will be missing.
 
 ## Building a binary
 
 To build a binary package (add other generators with `-G`):
+
 ```bash
 make
 make package
@@ -49,13 +49,12 @@ For testing, the main `test/CMakeLists.txt` is used by ROOT, and the `test/*/CMa
 
 Extracting from the ROOT sources is made possible through a few careful design features:
 
-* A CMake variable `minuit2_inroot` lets the build system know we are inside ROOT (it looks for `../../build/version_info`)
-* All files that are not part of the minuit2 directory are passed into `copy_standalone`, and that handles selecting the correct location
-* `copy_standalone` copies the files into the minuit2 source directory if `minuit2_standalone` is `ON`
+- A CMake variable `minuit2_inroot` lets the build system know we are inside ROOT (it looks for `../../build/version_info`)
+- All files that are not part of the minuit2 directory are passed into `copy_standalone`, and that handles selecting the correct location
+- `copy_standalone` copies the files into the minuit2 source directory if `minuit2_standalone` is `ON`
 
 After this happens, all the standard CMake machinery can produce the source distribution. And, CMake correctly builds and installs in either mode, since all source and header files are explicitly listed.
 
-
-[ROOT]: https://root.cern.ch
+[root]: https://root.cern.ch
 [minuitdoc]: https://root.cern.ch/root/htmldoc/guides/users-guide/ROOTUsersGuide.html#minuit2-package
-[CMake]: https://cmake.org
+[cmake]: https://cmake.org

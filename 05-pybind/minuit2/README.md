@@ -5,7 +5,6 @@ For information about the Minuit2 fitter, please see the [documentation in ROOT]
 
 There are two ways to get Minuit2; you can checkout the [ROOT] source, then just build or use `add_subdirectory` with `<ROOT_SOURCE>/math/minuit2`, or you can get a Minuit2 source distribution which contains all the needed files to build with [CMake]. See [DEVELOP.md] for more information about extracting the source files from [ROOT].
 
-
 ## Building
 
 To build, use the standard [CMake] procedure; on most systems, this looks like:
@@ -27,11 +26,10 @@ cmake ..
 make
 ```
 
+The standard [CMake] variables, such as `CMAKE_BUILD_TYPE` and `CMAKE_INSTALL_PREFIX`, work with Minuit2. There are two other options:
 
-The standard [CMake] variables, such as `CMAKE_BUILD_TYPE` and `CMAKE_INSTALL_PREFIX`, work with Minuit2.  There are two other options:
-
-* `minuit2_mpi` activates the (outdated C++) MPI bindings.
-* `minuit2_omp` activates OpenMP (make sure all FCNs are threadsafe).
+- `minuit2_mpi` activates the (outdated C++) MPI bindings.
+- `minuit2_omp` activates OpenMP (make sure all FCNs are threadsafe).
 
 ## Testing
 
@@ -57,12 +55,12 @@ You do not need to add include directories or anything else for Minuit2; the CMa
 ## Packaging
 
 To build a binary package (add other generators with `-G`):
+
 ```bash
 make package
 ```
 
-
-[DEVELOP.md]: ./DEVELOP.md
-[ROOT]: https://root.cern.ch
+[develop.md]: ./DEVELOP.md
+[root]: https://root.cern.ch
 [minuitdoc]: https://root.cern.ch/root/htmldoc/guides/users-guide/ROOTUsersGuide.html#minuit2-package
-[CMake]: https://cmake.org
+[cmake]: https://cmake.org
