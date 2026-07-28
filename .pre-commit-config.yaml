@@ -1,45 +1,51 @@
+ci:
+  autoupdate_commit_msg: "chore: update pre-commit hooks"
+
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: "v4.4.0"
+    rev: "v6.0.0"
     hooks:
       - id: check-added-large-files
       - id: check-case-conflict
       - id: check-merge-conflict
       - id: check-symlinks
+      - id: check-toml
       - id: check-yaml
       - id: debug-statements
       - id: end-of-file-fixer
       - id: mixed-line-ending
-      - id: requirements-txt-fixer
       - id: trailing-whitespace
 
-  - repo: https://github.com/psf/black
-    rev: "22.10.0"
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: "v0.16.0"
     hooks:
-      - id: black-jupyter
+      - id: ruff-check
+        args: ["--fix", "--show-fixes"]
+      - id: ruff-format
 
   - repo: https://github.com/kynan/nbstripout
-    rev: "0.6.1"
+    rev: "0.9.1"
     hooks:
       - id: nbstripout
 
   - repo: https://github.com/codespell-project/codespell
-    rev: "v2.2.2"
+    rev: "v2.4.3"
     hooks:
       - id: codespell
         args: ["-L", "hist"]
-        exclude: ^05-pybind/minuit2
+        exclude: ^(05-pybind/minuit2|pixi\.lock)
 
-  - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: "v3.0.0-alpha.4"
+  - repo: https://github.com/rbubley/mirrors-prettier
+    rev: "v3.9.6"
     hooks:
       - id: prettier
         types_or: [yaml, markdown]
+        exclude: ^05-pybind/minuit2
 
   - repo: local
     hooks:
       - id: disallow-caps
         name: Disallow improper capitalization
         language: pygrep
-        entry: PyBind|Numpy|Cmake|CCache|Github|PyTest
+        entry: PyBind|NanoBind|Numpy|Cmake|CCache|Github|PyTest|Scikit-Build
         exclude: .pre-commit-config.yaml

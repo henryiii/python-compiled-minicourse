@@ -16,10 +16,6 @@ See class.
 
 #### Local install:
 
-If you are reading this at least 10 minutes before the course starts or you have anaconda
-or miniconda installed, you will probably be best off installing miniconda.
-This way you will keep local edits and will have an environment to play with. Warning: Some part
-
 Get the repository:
 
 ```bash
@@ -27,39 +23,61 @@ git clone https://github.com/henryiii/python-compiled-minicourse.git
 cd python-compiled-minicourse
 ```
 
-Download and install
-[miniconda](https://docs.conda.io/en/latest/miniconda.html). On macOS with
-homebrew, just run `brew cask install miniconda` [(see my
-recommendations)](https://iscinumpy.gitlab.io/post/setup-a-new-mac/).
+The lessons need compilers, CMake, SWIG, and Cling, so the environment comes from
+conda-forge. The quickest way to get it is [pixi](https://pixi.sh), which needs no
+other setup and keeps everything inside this directory:
 
-Run:
+```bash
+pixi run check   # Check that the environment is complete
+pixi run lab     # Start JupyterLab
+```
+
+Pixi installs the environment on the first run. Use `pixi shell` if you want an
+activated shell, and `exit` to leave it.
+
+<details><summary>Using conda instead</summary>
+
+If you already have conda or miniforge, `environment.yml` describes the same
+environment:
 
 ```bash
 conda env create
-```
-
-from this directory. This will create an environment `compiled-minicourse`. To use:
-
-```bash
 conda activate compiled-minicourse
-./check.py # Check to see if you've installed this correctly
+./check.py
 jupyter lab
 ```
 
-And, to disable:
+To add a package, modify `environment.yml`, then run `conda env update`.
 
-```bash
-conda deactivate
-```
-
-or restart your terminal.
-
-> If you want to add a package, modify `environment.yml` then run:
->
-> ```bash
-> conda env update
-> ```
+</details>
 
 ## Lessons
 
+Run the notebooks in order:
+
+| Lesson                                   | Topic                                           |
+| ---------------------------------------- | ----------------------------------------------- |
+| [00-intro](./00-intro.ipynb)             | Why and when to compile                         |
+| [01-shared-objects](./01-shared-objects) | ctypes and CFFI: calling a plain shared library |
+| [02-cpython](./02-cpython)               | The CPython C API by hand, Stable ABI           |
+| [03-swig](./03-swig)                     | SWIG: bindings for many languages at once       |
+| [04-cython](./04-cython)                 | Cython: Python and C in one language            |
+| [05-pybind](./05-pybind)                 | pybind11, including a full Minuit2 binding      |
+| [06-nanobind](./06-nanobind)             | nanobind: pybind11's smaller, faster successor  |
+| [07-cppyy](./07-cppyy)                   | cppyy: bindings from a C++ interpreter          |
+
 Class participants: please complete the survey that will be posted.
+
+## Development
+
+Linting uses [pre-commit](https://pre-commit.com):
+
+```bash
+pipx run pre-commit run -a
+```
+
+CI runs the linters and executes every notebook. To do that locally:
+
+```bash
+pixi run -e test test
+```

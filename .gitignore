@@ -156,3 +156,7 @@ simpleminuit
 *.h
 *.toml
 *.dSYM
+
+# ...except the ones that are actually part of the course
+!pixi.toml
+!ruff.toml

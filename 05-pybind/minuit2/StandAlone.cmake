@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.15...4.0)
 
 # Tested with and supporting policies up to the following CMake version.
 # Not using ... syntax due to parser bug in MSVC's built-in CMake server mode.
