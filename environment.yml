@@ -2,8 +2,8 @@ name: compiled-minicourse
 channels:
   - conda-forge
 dependencies:
-  - python >=3.11,<3.14
-  - numpy >=1.24
+  - python >=3.11
+  - numpy >=2
   - jupyterlab >=4
   - numba >=0.60
   - pybind11 >=3

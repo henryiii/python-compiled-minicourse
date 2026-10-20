@@ -5,8 +5,8 @@ channels = ["conda-forge"]
 platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
 
 [dependencies]
-python = ">=3.11,<3.14"
-numpy = ">=1.24"
+python = ">=3.11"
+numpy = ">=2"
 jupyterlab = ">=4"
 numba = ">=0.60"
 pybind11 = ">=3"
