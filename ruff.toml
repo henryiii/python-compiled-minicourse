@@ -1,0 +1,8 @@
+extend-exclude = ["05-pybind/minuit2"]
+
+[lint]
+extend-select = ["I", "PIE", "UP"]
+
+[lint.per-file-ignores]
+# The %%cython magic defines names that Ruff cannot see
+"04-cython/*.ipynb" = ["F821"]

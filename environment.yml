@@ -4,19 +4,17 @@ channels:
 dependencies:
   - python >=3.11
   - numpy >=2
-  - scipy >=1.11
   - jupyterlab >=4
-  - plumbum >=1.8
-  - numba >=0.59
-  - setuptools >=77
-  - scikit-build-core >=0.10
+  - numba >=0.60
   - pybind11 >=3
   - nanobind >=2
   - cython >=3
-  - swig >=4
-  - cppyy >=3
+  - swig >=4.1
+  - cppyy >=3.1
   - cffi >=1.16
   - compilers
   - cmake >=3.15
   - ninja
-  - nb_conda_kernels
+  - pip
+  - setuptools >=77
+  - scikit-build-core >=0.10

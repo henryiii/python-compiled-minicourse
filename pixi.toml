@@ -1,0 +1,47 @@
+[workspace]
+name = "compiled-minicourse"
+description = "Mixing compiled code and Python: Princeton mini-course"
+channels = ["conda-forge"]
+platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
+
+[dependencies]
+python = ">=3.11"
+numpy = ">=2"
+jupyterlab = ">=4"
+numba = ">=0.60"
+pybind11 = ">=3"
+nanobind = ">=2"
+cython = ">=3"
+swig = ">=4.1"
+cffi = ">=1.16"
+cxx-compiler = "*"
+c-compiler = "*"
+cmake = ">=3.15"
+ninja = "*"
+pip = "*"
+setuptools = ">=77"
+scikit-build-core = ">=0.10"
+
+# Cling conflicts with the compilers on Windows, and has no Windows build
+[target.unix.dependencies]
+cppyy = ">=3.1"
+
+# cppyy-cling 6.32 crashes on the GCC 15 libstdc++ headers
+[target.linux-64.dependencies]
+gxx_linux-64 = "<15"
+gcc_linux-64 = "<15"
+
+[tasks]
+lab = "jupyter lab"
+check = "python check.py"
+
+[feature.test.dependencies]
+pytest = ">=7"
+nbmake = ">=1.5"
+
+# Run every notebook top to bottom, exactly as CI does
+[feature.test.tasks]
+test = "pytest --nbmake --nbmake-timeout=1800 00-intro.ipynb 0*/*.ipynb"
+
+[environments]
+test = ["test"]
