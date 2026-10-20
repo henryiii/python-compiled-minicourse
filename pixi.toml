@@ -26,6 +26,11 @@ scikit-build-core = ">=0.10"
 [target.unix.dependencies]
 cppyy = ">=3.1"
 
+# cppyy-cling 6.32 crashes on the GCC 15 libstdc++ headers
+[target.linux-64.dependencies]
+gxx_linux-64 = "<15"
+gcc_linux-64 = "<15"
+
 [tasks]
 lab = "jupyter lab"
 check = "python check.py"
