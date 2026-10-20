@@ -2,20 +2,21 @@ name: compiled-minicourse
 channels:
   - conda-forge
 dependencies:
-  - python ==3.9
-  - numpy >=1.20
-  - matplotlib >=3
-  - scipy >=1.2
-  - jupyterlab >=2
-  - plumbum >=1.6.9
-  - numba >=0.50
-  - pybind11 >=2.8
-  - cython >=0.29.17
+  - python >=3.11
+  - numpy >=2
+  - scipy >=1.11
+  - jupyterlab >=4
+  - plumbum >=1.8
+  - numba >=0.59
+  - setuptools >=77
+  - scikit-build-core >=0.10
+  - pybind11 >=3
+  - nanobind >=2
+  - cython >=3
   - swig >=4
-  - cppyy >=1.6
-  - cffi >=1.14
+  - cppyy >=3
+  - cffi >=1.16
   - compilers
-  - cmake
+  - cmake >=3.15
   - ninja
   - nb_conda_kernels
-  - mypy >=0.900

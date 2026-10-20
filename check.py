@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import sys
 
 try:
-    assert sys.version_info >= (3, 8), "Python should be 3.8+"
+    assert sys.version_info >= (3, 11), "Python should be 3.11+"
 
     import numba
     import pybind11
